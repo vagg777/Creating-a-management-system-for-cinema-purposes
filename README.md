@@ -106,7 +106,7 @@ You may login in any MySQL database management panel and create a new database. 
         String dbname = "baseis", username = "root", password = "";
 
         int port = 3306;
-You may update this according to your localhost setup and credentials.
+    You may update this according to your localhost setup and credentials.
 2. Populating the database
 Select your database (e.g. `baseis`) and import the `create.sql` file and `insert.sql`, which includes the creation of the tables and the data population.
 3. Running the `MyWindow.java` file

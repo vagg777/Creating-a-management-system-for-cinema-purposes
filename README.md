@@ -131,7 +131,7 @@ If we manage and connect to the database, the main window of the application ope
 
 Image 3: The Main Application Window
 
-### 5.1. The Customer tab
+## 5.1. The Customer tab
 If we want to simulate the operation of the customer, then we press the button **CUSTOMER** and the application opens a new customer window. Then, we are able to see customer-specific information, so we ask for the customer's code to find the information he wants. If a customer code that is in our database is given (code field in the table customer), we display the requested information using a JTextArea.
 
 ![enter image description here](https://i.ibb.co/Sw9s164/4.png)
@@ -141,3 +141,24 @@ Image 4: Providing the Client Code for access to Customer data
 ![enter image description here](https://i.ibb.co/C6Z65Q5/5.png)
 
 Image 5: Customer personal information
+
+![enter image description here](https://i.ibb.co/QJS2qpP/h.jpg)
+
+Image 6: Error if the Client Code is not correct
+
+## 5.2. The Shift Manager tab
+To simulate the shift manager, select the **SHIFT MANAGER** button in the main application window. After the button is pressed, a new window opens with the options that the shift manager can make using one JComboBox. Some indicative queries the Shift Manager can run are depicted below:
+
+![enter image description here](https://i.ibb.co/4SGLbnz/1.png)
+
+Image 7: Error if the Client Code is not correct
+
+![enter image description here](https://i.ibb.co/MfhDJLL/2.png)
+
+Image 8: Error if the Client Code is not correct
+
+![enter image description here](https://i.ibb.co/TWZxGXf/4.png)
+
+Image 9: Error if the Client Code is not correct
+
+

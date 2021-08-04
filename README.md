@@ -114,3 +114,25 @@ This is the main file which includes the all back-end information handling for t
 4. That's it! You have successfully deployed the system...
 
 # 5. Using the Application
+
+When we launch the application (`MyWindow.java` file), a message is initially displayed as to whether or not we were able to connect to the database. In case for any reason we are unable to connect, we display an error message to the user and terminate the program, otherwise we display a connection success message.
+
+![enter image description here](https://i.ibb.co/qxS6m9t/2.png)
+Image 1: Successful connection to database
+
+![enter image description here](https://i.ibb.co/FzrHbGB/1.jpg)
+Image 2: Error while connecting to database
+
+If we manage and connect to the database, the main window of the application opens and we are shown the available options of the a) client, b) the shift manager and c) the cashier respectively.
+
+![enter image description here](https://i.ibb.co/bNCy5Gj/3.png)
+Image 3: The Main Application Window
+
+### 5.1. The Customer tab
+If we want to simulate the operation of the customer, then we press the button **CUSTOMER** and the application opens a new customer window. Then, we are able to see customer-specific information, so we ask for the customer's code to find the information he wants. If a customer code that is in our database is given (code field in the table customer), we display the requested information using a JTextArea.
+
+![enter image description here](https://i.ibb.co/Sw9s164/4.png)
+Image 4: Providing the Client Code for access to Customer data
+
+![enter image description here](https://i.ibb.co/C6Z65Q5/5.png)
+Image 5: Customer personal information

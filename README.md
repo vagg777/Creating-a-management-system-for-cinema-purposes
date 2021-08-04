@@ -1,1 +1,80 @@
-# Creating-an-cinema-management-system
+# Creating an cinema management system
+
+### 1. Introduction
+The proposed JAVA application is a complete systemic approach on a management system to be used from cinema owners for better management of movies, employees, clients, tickets and more.
+
+For the **movies**, we save the actors, the directors, a brief summary, the url with the trailers (can be more than one), the production date, the director (can be more than one) and its genre (social drama, comedy, action, horror, etc). A movie can have more than one genre designation. We also keep track of any awards for the film (award name, award date, description as well as whether it was only nominated for the award or if it won).
+
+For the **directors**, we keep information about the name and surname of each contributor, a short biography, the url with a photo of it. The actors can be directors and/or actors. In addition, we keep track of the awards they have received (award name, award date, description and whether they were only nominated for the award or if they won it).
+
+The **cinema** has a set of halls and for each we know its capacity, whether it is air conditioned or not, the floor on which it is located and its name (unique). **Tickets** refer to a specific movie in a room, at a specific location and start and end time. Tickets are divided into simple and 3D which are charged 15% more than ordinary. **Seats** have a specific unique number in a room and a description of where the seat is on the vertical axis ("low", "middle", or "high") on the horizontal axis ("center", "right wing", "Left wing”), as well as whether or not it is in the corridor. The numbering of the positions starts from the top left and ends at the bottom right.
+
+**Employees** work in shifts. Each shift employs 3 cashiers, 4 employees and 2 cleaners and a shift manager. Each employee can work only one shift per day (morning or afternoon) and the system keeps track of the days and shifts he/she works, his/her degree, a short CV, years of service in a similar position and the date of recruitment. Per month, the salary of each employee is based on the shifts he/she worked (10 hours per shift) and his hourly cost.
+
+Every **customer** has an electronic card in the system. The cinema provides cards with a unique code which customers use every time they visit it. A card can correspond to more than one customer (e.g. members of a family but each member will have their own card in the system) but each customer must be associated with only one card. Each card in each transaction accumulates a number of bonus points (10% of the cost of tickets) and when they exceed 200 the customer wins 2 free tickets. The customer has a unique password and the system stores data about the movies he/she has watched, the card he is associated with, as well as personal information such as sheet, date of birth, marital status. Finally, a customer at the end of the movie rates it with 1 to 5 stars.
+
+The following assumptions exist in this approach:
+* Each movie is shown in only one room. Respectively, each room shows only one film.
+* The first release date of a movie does not correspond to the movie release date in the cinema. That is, the cinema can show films that were released many years ago..
+* Each customer of the cinema has his own card in the system however he can use any card. Points are charged to the cardholder.
+* There are only two shift zones. Morning (8 am - 6 pm) and afternoon (6:01 pm - 4 am)
+* A movie can share same actors/producers/directors with other movies.
+* In each employee, we save the hours he works per shift and how much he is paid each hour (depending on his specialty).
+* For each card, we store in a variable how many tickets he is entitled to and if the customer received them.
+* 
+## 2. Building the database (MySQL)
+
+* `movie` table:
+Each film will have its own title, synopsis and release date.
+* `trailer_url` table:
+Because a movie can have more than one trailer url’s, we define them in a separate table that stores the url value and the movie to which it corresponds.
+* `category` table:
+Because a movie can belong to more than one category, we create a separate table that stores a category and the movie to which it belongs.
+* `room` table:
+Each room has its own name (rname separate for each room) and we keep in variables the total seats, the available vacancies, the floor on which it is located, if it has air condition which movie is shown in that room and who is the responsible employee(rusher).
+* `ticket` table:
+Each ticket has its start time (and the movie to which it corresponds), the end time, its location, whether it is plain or 3D (sep variable), its price, for which room it is, and which cashier issued it (printer).
+* `custsees` relationship:
+It has as primary key who watches the movie (watcher) and which movie watches (wmovie). It also saves how much he rated the movie and when he saw it (wdate - linked to the ticket start_time).
+* `customer` table:
+Customers are separated from each other by their code (code) and no name is kept for customers in the system. We also save gender, birthday and marital status.
+* `cartel` table:
+Each customer has his own card in the system with primary key the owner_code that shows in the password of each customer.
+* `card` table:
+Every customer who tickets to the system uses a card that is linked to its owner via a code (own_code -> code), and each card has its own id, a set of points, the code of the person who used it (without necessarily being the owner), how many tickets the cardholder is entitled to and whether he/she got the tickets he/she is entitled to.
+* `mawarded` relationship:
+This relationship connects awards with films. The awarded gets a value of 1 if the film was awarded a prize and 0 if it was not awarded. It also saves the award date, which film was awarded (aw_movie showing the title of the film) and aw_award showing the name of the award the film won.
+* `award` table:
+The award won (either by a film or by a film actor). For each award we keep the name of the award and its description.
+* `factors` table:
+Film actors. For each one we keep his first and last name, a CV, the address of his photo and the id that distinguishes him as a factor.
+* `star` table:
+Refers to the actors and for each one an id that distinguishes him/her.
+* `director` table:
+Refers to the directors and for each one an id that distinguishes him/her.
+* `mhas` relationship:
+It means that a film has an actor, ie an actor or a director. It keeps the name of the movie and the id of the actor that it shows in the primary keys of the respective entities.
+* `fawarded` relationship:
+It means that someone was nominated for an award. The variable fawarded gets a value of 1 if the factor won the prize and 0 if it was simply nominated. It also saves the award date which actor was awarded (indicating the actor's id - actor or director -), and which award he won which shows the name of the award.
+* `seats` table:
+It is stored in which room the position is located, what number corresponds to it, in which order it is located. The two variables vertical_num and horizontal_num due to SET only get predefined arguments that show us where in the room the position is. Finally, the cashier who issued the ticket is saved.
+* `worker` table:
+Each employee is separated in the system by its wid. It also saves the date of hiring (hdate), how many years of work he has, his CV, what degree he has, how many hours he works per shift (hours), how much he is paid for each hour worked (kostos_h), his salary and his status (the his post).
+* `wworks` relationship:
+Indicates which employee works in which shift. It has two variables that point to the employee id and the shift id.
+* `shift` table:
+Each shift has its own id. More specifically:
+    * Morning shift: From 8 in the morning until 6 at noon.
+    * Evening shift: From 6 and 1 minute at noon until 4 in the evening.
+    
+    Whether the shift is evening or morning we keep it in the variable time_of_day and finally for each shift we keep the date that was executed.
+
+
+## 3. Tools needed
+
+* Project Version : `Final`
+
+# 4. Deploying the Java Application
+
+The steps to deploy the website should be the following:
+

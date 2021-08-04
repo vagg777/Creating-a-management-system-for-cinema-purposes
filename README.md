@@ -90,10 +90,25 @@ Use the `insert.sql` file to insert the test records that fill in the informatio
 
 ## 3. Tools needed
 
-* Project Version : `Final`
-* 
+* Programming Language : `Java`
+* IDE Version: `Eclipse 4.4`
+* Java Connector: `Java Database Connectivity (JDBC)`
+* JDB Version: `MySQL Connector/J 5.1.39`
+* SQL Version : `MySQL RDBMS (XAMPP)`
 
 # 4. Deploying the Java Application
 
 The steps to deploy the website should be the following:
 
+1. Creating the database 
+You may login in any MySQL database management panel and create a new database. You may use the `baseis` name for your database. Make sure you select the UTF-8 encoding (collation utf8_general_ci). The `MyWindow.java` file includes the following lines for a connection to the MySQL database:
+        *`String dbname = "baseis", username = "root", password = "";`*
+        *`int port = 3306;`*
+You may update this according to your localhost setup and credentials.
+2. Populating the database
+Select your database (e.g. `baseis`) and import the `create.sql` file and `insert.sql`, which includes the creation of the tables and the data population.
+3. Running the `MyWindow.java` file
+This is the main file which includes the all back-end information handling for the application to launch.
+4. That's it! You have successfully deployed the system...
+
+# 5. Using the Application

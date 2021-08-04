@@ -102,8 +102,10 @@ The steps to deploy the website should be the following:
 
 1. Creating the database 
 You may login in any MySQL database management panel and create a new database. You may use the `baseis` name for your database. Make sure you select the UTF-8 encoding (collation utf8_general_ci). The `MyWindow.java` file includes the following lines for a connection to the MySQL database:
-        *`String dbname = "baseis", username = "root", password = "";`*
-        *`int port = 3306;`*
+
+        String dbname = "baseis", username = "root", password = "";
+
+        int port = 3306;
 You may update this according to your localhost setup and credentials.
 2. Populating the database
 Select your database (e.g. `baseis`) and import the `create.sql` file and `insert.sql`, which includes the creation of the tables and the data population.

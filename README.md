@@ -21,8 +21,10 @@ The following assumptions exist in this approach:
 * A movie can share same actors/producers/directors with other movies.
 * In each employee, we save the hours he works per shift and how much he is paid each hour (depending on his specialty).
 * For each card, we store in a variable how many tickets he is entitled to and if the customer received them.
-* 
+
 ## 2. Building the database (MySQL)
+
+Use the `create.sql` file to create the following tables:
 
 * `movie` table:
 Each film will have its own title, synopsis and release date.
@@ -69,10 +71,27 @@ Each shift has its own id. More specifically:
     
     Whether the shift is evening or morning we keep it in the variable time_of_day and finally for each shift we keep the date that was executed.
 
+Use the `insert.sql` file to insert the test records that fill in the information for all tables. More specifically, the inserts consist of:
+* 8 movies
+* 8 rooms [each room plays only one movie (3D or simple)]
+* 6 awards in total (films or actors)
+* 9 actors (actors and directors)
+* 10 customers (each with his own card in the system)
+* 20 employees (6 cashiers, 4 cleaners, 2 shift managers, 8 passengers)
+* 36 tickets (3D or just)
+* Many seats (closed or free)
+* 26 shifts (2 per day for 13 days)
+* 10 cards (one for each customer)
+* 10 cards (one per customer - some have been used more than once)
+* 3 directors
+* 6 actors
+* 5 categories of tannins
+* Relationships that correspond to the numbers of the entities 
 
 ## 3. Tools needed
 
 * Project Version : `Final`
+* 
 
 # 4. Deploying the Java Application
 

@@ -1,4 +1,4 @@
-# Creating an cinema management system
+# Creating a management system for cinema purposes
 
 ### 1. Introduction
 The proposed JAVA application is a complete systemic approach on a management system to be used from cinema owners for better management of movies, employees, clients, tickets and more.

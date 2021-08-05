@@ -151,14 +151,52 @@ To simulate the shift manager, select the **SHIFT MANAGER** button in the main a
 
 ![enter image description here](https://i.ibb.co/4SGLbnz/1.png)
 
-Image 7: Error if the Client Code is not correct
+Image 7: Which movies did the male clients watch in a certain period of time (defined by the manager) and rated them 4 or 5 and what was the category of these movies?
 
 ![enter image description here](https://i.ibb.co/MfhDJLL/2.png)
 
-Image 8: Error if the Client Code is not correct
+Image 8: What is the movie (or movies) with the most tickets in a given time period (defined by the manager)
 
 ![enter image description here](https://i.ibb.co/TWZxGXf/4.png)
 
-Image 9: Error if the Client Code is not correct
+Image 9: What kind of movies do female customers aged 20-30 choose to watch (in descending order)?
 
+## 5.3. The Cashier tab
+If we want to simulate the operation of the cashier, then we press the **CASHIER** button, which opens a new window for the cashier. Once the window opens, the application shows the cashier all the possible choices he can make by using a JComboBox. The available features are the following:
+1. Show movie screenings per day and the available seats
+2. Validate Ticket
+3. Free Tickets feature
+4. Manage Client Personal Information
+5. Overall Clients charge fee
 
+![enter image description here](https://i.ibb.co/K53wZpX/13123123.jpg)
+
+Image 10: Available features for the Cashier
+
+Let's select the 1st option **'1. Show movie screenings per day and the available seats'**.
+
+![enter image description here](https://i.ibb.co/KbLHF3R/1.png)
+
+Image 11: Enter datetime for the movie screening
+
+![enter image description here](https://i.ibb.co/b1XXmW6/3.png)
+
+Image 12: Results of the query
+
+Let's select the 2nd option **'2. Validate Ticket'**. With each cash-in of a ticket, the customer's points should increase by 10% on the value of the ticket (10 for simple, 11.5 for 3D) and as soon as it reaches 200 or above, the customer wins 2 free tickets!
+
+![enter image description here](https://i.ibb.co/GxyPJXH/4.png)
+
+Image 13: Enter the number of tickets for validation
+
+![enter image description here](https://i.ibb.co/Lp8tndN/5.png)
+
+Image 14: Enter the card number for the issued ticket
+
+![enter image description here](https://i.ibb.co/ctcWzV4/7.png)
+
+Image 15: Enter the ticket details
+
+![enter image description here](https://i.ibb.co/rwg56F1/8.png)
+
+Image 16: Check if client should be awarded with free tickets or not

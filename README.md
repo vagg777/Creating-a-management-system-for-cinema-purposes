@@ -200,3 +200,47 @@ Image 15: Enter the ticket details
 ![enter image description here](https://i.ibb.co/rwg56F1/8.png)
 
 Image 16: Check if client should be awarded with free tickets or not
+
+
+Let's select the 3rd option **'Free Tickets feature'** and let's suppose that the customer intends to cash-in his free tickets.
+
+![enter image description here](https://i.ibb.co/6yr6Vzc/1.png)
+
+Image 17: Enter the card number for the free issued ticket
+
+![enter image description here](https://i.ibb.co/qyhZSHN/3.png)
+
+Image 18: Confirmation on the cashing of the tickets
+
+![enter image description here](https://i.ibb.co/FhM0WHc/4.jpg)
+
+Image 19: Select the movie to cash in the tickets
+
+Let's select the 4th option **'4. Manage Client Personal Information'**. In option 4,we are able to manage the customer's personal information. Therefore, we ask the customer for his number (code field in the customer table) and display 5 fields as JTextFields with the user details. For example:
+
+![enter image description here](https://i.ibb.co/bWBXVD3/1.png)
+
+Image 20: Customer Information
+
+![enter image description here](https://i.ibb.co/mXBgGwF/2.png)
+
+Image 21: Update Field
+
+![enter image description here](https://i.ibb.co/7RBppTR/3.png)
+
+Image 22: Successful message upon completion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

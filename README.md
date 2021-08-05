@@ -230,7 +230,15 @@ Image 21: Update Field
 
 Image 22: Successful message upon completion
 
+Finally, let's select the 5th option **'5. Overall Clients charge fee'**, which refers to the overall fee charged to the customer.
 
+![enter image description here](https://i.ibb.co/Tw5pF3N/1.png)
+
+Image 23: Cashier enters the Client Code 
+
+![enter image description here](https://i.ibb.co/bWDg7GH/2.png)
+
+Image 24: Show the charge fee for the client
 
 
 
